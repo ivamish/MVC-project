@@ -1,7 +1,10 @@
 <?php
-
 use vendor\Router;
+include_once '../config/app_config.php';
+include_once '../config/routes.php';
 
-    include_once '../config/app_config.php';
-    
-    Router::add('main', ['Controller', 'action']);
+$url = trim($_SERVER["REQUEST_URI"], '/');
+
+if (!Router::dispatch($url)) {
+    echo '404';
+}

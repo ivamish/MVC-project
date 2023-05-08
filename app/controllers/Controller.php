@@ -1,11 +1,11 @@
 <?php
-namespace controller;
+namespace app\controllers;
 
 class Controller {
 
-    public function action() : void
+    public function action(string $slug) : void
     {
-
+        echo $slug;
     }
     
 }

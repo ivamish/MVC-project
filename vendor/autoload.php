@@ -1,7 +1,6 @@
 <?php
     spl_autoload_register(function ($class_name) {
         $classFile = $_SERVER['DOCUMENT_ROOT'] . '\\' . $class_name . '.php';
-        echo $classFile;
         if (file_exists($classFile)) {
             include $classFile;
         } else {

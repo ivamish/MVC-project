@@ -7,5 +7,3 @@
     define('VENDOR', ROOT . '/vendor');
     define('CONF', ROOT . '/config');
     define('APP', ROOT . '/app');
-
-    include VENDOR . '/router.php';
