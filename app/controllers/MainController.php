@@ -8,6 +8,7 @@ class MainController
 {
     public function index()
     {
-        echo 'Главная стр';
+        $test = 123;
+        view('index', compact('test'));
     }
 }

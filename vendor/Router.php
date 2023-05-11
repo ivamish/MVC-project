@@ -26,7 +26,6 @@ class Router {
     {
         foreach (self::$routes as $name => $route) {
             if (preg_match("#^$name$#", $url, $matches)) {
-
                 array_shift($matches);
                 $controller = array_key_first($route);
                 $action = $route[$controller];
@@ -38,7 +37,7 @@ class Router {
                  */
                 if(!class_exists($controllerClass)) {
                     throw new \Error("Контроллер $controller не найден");
-                    return false;
+//                    return false;
                 }
 
                 /**
@@ -47,7 +46,7 @@ class Router {
                 if(!method_exists($controllerClass, $action))
                 {
                     throw new \Error("Метод $action у контроллера $controller не найден");
-                    return false;
+//                    return false;
                 }
 
 
@@ -62,8 +61,7 @@ class Router {
 
                 return true;
             }
-
-            return false;
         }
+        return false;
     }
 }
